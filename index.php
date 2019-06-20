@@ -29,7 +29,7 @@
     $host = "dwirahman.database.windows.net";
     $user = "teamsansekerta";
     $pass = "Saputra@110509";
-    $db = "dbo.registrasi";
+    $db = "registrasi";
     try {
         $conn = new PDO("sqlsrv:server = $host; Database = $db", $user, $pass);
         $conn->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
@@ -42,7 +42,7 @@
             $email = $_POST['email'];
             $job = $_POST['job'];
             // Insert data
-            $sql_insert = "INSERT INTO dbo.registrasi (name, email, job) 
+            $sql_insert = "INSERT INTO registrasi (name, email, job) 
                         VALUES (?,?,?,?)";
             $stmt = $conn->prepare($sql_insert);
             $stmt->bindValue(1, $name);
@@ -55,7 +55,7 @@
         echo "<h3>Your're registered!</h3>";
     } else if (isset($_POST['load_data'])) {
         try {
-            $sql_select = "SELECT * FROM dbo.registrasi";
+            $sql_select = "SELECT * FROM registrasi";
             $stmt = $conn->query($sql_select);
             $registrants = $stmt->fetchAll(); 
             if(count($registrants) > 0) {
