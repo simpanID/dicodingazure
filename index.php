@@ -31,7 +31,7 @@
     $pass = "Saputra@110509";
     $db = "dbo.registrasi";
     try {
-        $conn = pdo_mysql("sqlsrv:server = $host; Database = $db", $user, $pass);
+        $conn = new PDO("sqlsrv:server = $host; Database = $db", $user, $pass);
         $conn->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
     } catch(Exception $e) {
         echo "Failed: " . $e;
@@ -64,7 +64,6 @@
                 echo "<tr><th>Name</th>";
                 echo "<th>Email</th>";
                 echo "<th>Job</th>";
-                echo "<th>Date</th></tr>";
                 foreach($registrants as $registrant) {
                     echo "<tr><td>".$registrant['name']."</td>";
                     echo "<td>".$registrant['email']."</td>";
