@@ -26,16 +26,14 @@
        <input type="submit" name="load_data" value="Load Data" />
  </form>
  <?php
-    $host = "mydicoding.database.windows.net";
-    $user = "sansekerta";
-    $pass = "awer@123456";
-    $db = "dbo.Registration";
-    try {
-        $conn = new PDO("sqlsrv:server = $host; Database = $db", $user, $pass);
-        $conn->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
-    } catch(Exception $e) {
-        echo "Failed: " . $e;
-    }
+try {
+    $conn = new PDO("sqlsrv:server = tcp:mydicoding.database.windows.net,1433; Database = mydicoding", "sansekerta", "awer@123456");
+    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+}
+catch (PDOException $e) {
+    print("Error connecting to SQL Server.");
+    die(print_r($e));
+}
     if (isset($_POST['submit'])) {
         try {
             $name = $_POST['name'];
