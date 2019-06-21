@@ -29,7 +29,7 @@
     $host = "mydicoding.database.windows.net";
     $user = "sansekerta";
     $pass = "awer@123456";
-    $db = "Registration";
+    $db = "dbo.Registration";
     try {
         $conn = new PDO("sqlsrv:server = $host; Database = $db", $user, $pass);
         $conn->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
