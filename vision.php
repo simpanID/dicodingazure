@@ -86,7 +86,7 @@ if (isset($_POST['submit'])) {
         <h5 class="card-title">Hasil Analisis :</h5>
         <p id="analisis" class="card-text"></p>
         <p class="card-text"><small class="text-muted"><?php echo $url ?></small></p>
-		<a href="#" class="btn btn-primary">Back</a>
+		<a href="http://dicodingrahman.azurewebsites.net/cvision.php" class="btn btn-primary">Back</a>
       </div>
     </div>
   </div>
