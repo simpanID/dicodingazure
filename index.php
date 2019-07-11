@@ -19,7 +19,7 @@
   <p class="lead">Analisis Image atau Gambar Menggunakan Computer Vision Azure.</p>
   <hr class="my-4">
   <p>Gunakan tombol dibawah ini untuk menggunakan teknologi Computer Vision Azure untuk analisis image.</p>
-  <a class="btn btn-primary btn-lg" href="https://dicodingrahman.azurewebsites.net/cvision.php" role="button">Go Vision</a>
+  <a class="btn btn-primary btn-lg" href="http://dicodingrahman.azurewebsites.net/cvision.php" role="button">Go Vision</a>
 </div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
